@@ -8,38 +8,45 @@
 </head>
 
 <body>
-</body>
-  <div class="header">
-    <div class="header__container row--center">
-      <div class="header__left row--center">
-        <div class="header__menu row--center"><img src="./img/header/burger.png" alt="меню"></div>
-        <div class="header__logo"><img src="./img/header/logo.png" alt="лого"></div>
+  <header>
+    <div class="header__container">
+      <div class="header__left">
+        <button class="header__button header__menu">
+          <img src="./img/header/burger.png" alt="меню">
+        </button>
+        <a href="#">
+          <img src="./img/header/logo.png" alt="CPS" class="header__logo">
+        </a>
       </div>
-      <div class="header__right row--center">
-        <div class="header__img header__img--hide row--center">
-          <a href="#"><img src="./img/header/call.png" alt="статус" ></a>
-          <a href="#"><img src="./img/header/chat.png" alt="статус"></a>
-          <a href="#"><img src="./img/header/profile.png" alt="статус"></a>
+      <div class="header__right">
+        <div class="header__services header__services--hide">
+          <button class="header__button">
+            <img src="./img/header/call.png" alt="Звонок">
+          </button>
+          <button class="header__button">
+            <img src="./img/header/chat.png" alt="Чат">
+          </button>
+          <button class="header__button">
+            <img src="./img/header/profile.png" alt="Профиль">
+          </button>
         </div>
-        <div class="header__img header__img--with-line row--center">
-          <a href="#"><img src="./img/header/repair.png" alt="Оставить заявку"></a>
-          <a href="#"><img src="./img/header/checkstatus.png" alt="Статус ремонта"></a>
+        <div class="header__services header__services--with-line">
+          <button class="header__button">
+            <img src="./img/header/repair.png" alt="Оставить заявку">
+          </button>
+          <button class="header__button">
+            <img src="./img/header/checkstatus.png" alt="Статус ремонта">
+          </button>
         </div>
       </div>
     </div>
-  </div>
-  <div class="main">
-    <div class="main__title row--center">
-      <h1>Услуги и сервисы</h1>
+  </header>
+  <main>
+    <div class="main__header">
+      <h1 class="main__title">Услуги и сервисы</h1>
       <div class="main__services">
-        <a href="#">
-          <img src="./img/header/repair.png" alt="заявка">
-          <p>Оставить заявку</p>
-        </a>
-        <a href="#">
-          <img src="./img/header/checkstatus.png" alt="статус">
-          <p>Статус ремонта</p>
-        </a>
+        <button class="main__button main__button-submit">Оставить заявку</button>
+        <button class="main__button main__button-status">Статус ремонта</button>
       </div>
     </div>
     <nav class="main__menu">
@@ -52,26 +59,23 @@
     </nav>
     <div class="main__content">
       <div class="main__text">
-        <p>Мы являемся авторизованным сервисным центром по ремонту 
-        техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной 
-        гарантией производителя.</p>
-        <div class="main__text--hide">
-            <p>
-              <span>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
-              <span>что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
-                  что к нам обращаются по рекомендациям и, в свою очередь, советуют 
-                  нас родным и близким.</span>
-            </p>
-          <div class="main__button">
-            <img src="./img/main/arrow.png" alt="стрелки">
-            <button>Читать далее</button>
-          </div>
+        <div class="main__paragraph">
+          <p>Мы являемся авторизованным сервисным центром по ремонту 
+          техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной 
+          гарантией производителя.</p>
+          <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+          что подтверждает большое количество постоянных клиентов. Мы гордимся тем, 
+          что к нам обращаются по рекомендациям и, в свою очередь, советуют 
+          нас родным и близким.</p>
         </div>
+        <button class="main__button main__button-arrow">Читать далее</button>
       </div>
-      <div class="main__img">
-        <img src="./img/main/01.png" alt="фото лого">
-        <img src="./img/main/02.png" alt="фото лого">
-      </div>
+      <img
+        class="main__img"
+        src="./img/main/01.png" 
+        alt="Фото CPS"
+        srcset="./img/main/01.png 567w, ./img/main/02.png 976w">
     </div>
-  </div>
+  </main>
+</body>
 </html>

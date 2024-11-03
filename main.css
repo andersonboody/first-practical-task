@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'TT Lakes Light';
+  font-family: 'TT Lakes';
   src: url('./font/TTLakes-Light.eot');
   src: url('./font/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
   url('./font/TTLakes-Light.woff') format('woff'),
@@ -8,7 +8,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'TT Lakes Medium./font/';
+  font-family: 'TT Lakes';
   src: url('./font/TTLakes-Medium.eot');
   src: url('./font/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
   url('./font/TTLakes-Medium.woff') format('woff'),
@@ -17,7 +17,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'TT Lakes Bold';
+  font-family: 'TT Lakes';
   src: url('./font/TTLakes-Bold.eot');
   src: url('./font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
   url('./font/TTLakes-Bold.woff') format('woff'),
@@ -43,66 +43,79 @@
   margin: 0px;
   text-decoration: none;
   color: var(--main-color-tx);
-  font-family: 'TT Lakes Extra Light';
+  font-family: 'TT Lakes', sans-serif;
 }
 h1 {
-  font-size: 28px; 
-  font-family: 'TT Lakes Bold';
+  font-size: 28px;
+  font-weight: 700;
 }
 a,
 button {
   font-size: 16px;
-  font-family: 'TT Lakes Medium';
+  font-weight: 400;
 }
 p,
 span {
   font-size: 14px;
-  font-family: 'TT Lakes Light';
+  font-weight: 300;
 }
+
+
+
 img {
   display: block;
 }
-.row--center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
+
 /* Шапка сайта */
-.header {
+header {
   border-bottom: var(--main-br);
 }
 .header__container {
-  margin: 10px 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .header__left {
-  min-width: 160px;
-  position: relative;
+  column-gap: 15px;
+  display: flex;
+}
+.header__right {
+  display: flex;
+  align-items: center;
 }
 
-.header__img a {
-  margin-right: 15px;
-}
-.header__img--with-line a:last-child{
-  margin-right: 0px;
+.header__button {
+  border: none;
+  background-color: white;
 }
 
-.header__img--hide {
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__services {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.header__services--hide {
   display: none;
 }
-.header__img--with-line::before{
+.header__services--with-line::before{
   display: inline-block;
   content: '';
   width: var(--main-vw-pseudo-elem);
   height: var(--main-vh-pseudo-elem);
   background-color: var(--main-bc-pseudo-elem);
-  margin-right: 10px;
 }
 /* Шапка сайта */
-.main {
-  margin-top: 20px;
-  background: var(--main--bc);
+
+.main__header {
+  padding-top: 20px;
 }
-.main__title > h1::before {
+.main__title::before {
   content: "";
   display: inline-block;
   width: 4px;
@@ -122,129 +135,115 @@ img {
   display: flex;
   overflow: auto;
   scrollbar-width: none;
-  margin: 20px;
+  column-gap: 10px;
+  padding: 20px;
 }
 .main__link {
   white-space: nowrap;
-  margin-right: 10px;
   padding: 10px 15px;
   display: inline-block;
   color: var(--main-color-a);
 }
-.main__link-activ{  
+.main__link-activ {  
   border: var(--main-br);
   border-radius: 5px;
   color: var(--main-color-tx);
   background-color: white;
 }
-.main__link:last-child {
-  margin-right: 0px;
+.main__text{
+  padding: 0px 20px 10px 20px;
 }
-
-.main__text {
-  margin: 10px 20px;
-}
-
-.main__text--hide > p {
-  display: none;
+.main__paragraph {
+  overflow: hidden;
+  max-height: 98px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 .main__button {
   display: flex;
-  margin: 10px 0px;
-}
-.main__button button{
-  background-color: var(--main--bc);
+  align-items: center;
+  background-color: white;
   border: none;
-  font-weight: bold;
 }
-.main__button img {
+.main__button-arrow::before {
+  display: inline-block;
+  content: '';
+  background-image: url(./img/main/arrow.png);
+  width: 8px;
+  height: 11px;
   margin: 10px;
-  vertical-align: middle;
 }
-.main__img img:last-child {
-  display: none;
+.main__img {
+ width: 100vw;
 }
 
 
 @media (min-width: 568px) and (max-width: 975px) {
-  .header__menu::after{
+  .header__menu::after {
     content: '';
     display: inline-block;
     width: var(--main-vw-pseudo-elem);
     height: var(--main-vh-pseudo-elem);
     background-color: var(--main-bc-pseudo-elem);
-    margin: 0px 20px;
+    margin-left: 15px;
   }
-  .header__img--hide{
+  .header__services--hide {
     display: flex;
-  }
-  .header__img--with-line::before{
-  margin-right: 15px;
+    padding-right: 15px;
   }
 
   .main__content {
-    margin-top: 30px;
     display: flex;
   }
-  .main__text {
-    margin: 0px 20px;
+  .main__paragraph {
+    max-height: 125px;
   }
-  .main__text--hide {
-    margin-top: 10px;
-  }
-  .main__text--hide p {
-    display: block;
-  }
-  .main__text--hide span:last-child {
-    display: none;
-  }
-  .main__img img{
+  .main__img {
     border-radius: 5px;
-    margin-right: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 976px) {
-  .header {
+  header {
     display: none;
   }
-
-  .main__services {
+  .main__header {
     display: flex;
-  }
-  .main__services a {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-right: 20px;
-  }
-  .main__services p {
-    margin-right: 10px;
-  }
-  .main__menu {
-    max-width: 1120px;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
-
+  .main__services {
+    display: flex;
+    column-gap: 10px;
+    padding-right: 20px;
+  }
+  .main__button-submit::after {
+    content: '';
+    background-image: url(./img/main/repair.png);
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  .main__button-status::after {
+    content: '';
+    background-image: url(./img/main/checkstatus.png);
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  .main__menu {
+    flex-wrap: wrap;
+  }
   .main__content {
     display: flex;
   }
-
-  .main__text--hide {
-    margin-top: 10px;
+  .main__paragraph {
+    max-height: 100%;
   }
-  .main__text--hide p{
-    display: block;
+  .main__img {
+    max-width: 532px;
+    border-radius: 5px;
+    padding-right: 20px;
   }
-
-  .main__img img:first-child {
-    display: none;
-  }
-  .main__img img:last-child {
-    display: block;
-    margin-right: 20px;
-
-  }
-
 }
